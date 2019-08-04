@@ -30,4 +30,10 @@ public abstract class AbstractBaseDomain implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     @Column(name = "gmt_modified")
     private Date gmtModified;
+
+    /**
+     * 0代表未删除，1代表逻辑删除
+     */
+    @Column(name = "is_delete")
+    private char isDelete;
 }
