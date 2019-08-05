@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
+/**
+ * @author lxy
+ */
 public abstract class AbstractBaseController<T extends AbstractBaseDomain> {
 
     private static final String LOGGING_LEVEL_MY_SHOP = "logging.level.com.lxy.stuinfomp";
