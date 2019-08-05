@@ -35,5 +35,5 @@ public abstract class AbstractBaseDomain implements Serializable {
      * 0代表未删除，1代表逻辑删除
      */
     @Column(name = "is_delete")
-    private char isDelete;
+    private Integer isDelete = 0;
 }
