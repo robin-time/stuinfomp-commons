@@ -13,6 +13,7 @@ import java.util.List;
 public class SuccessResult<T extends AbstractBaseDomain> extends AbstractBaseResult{
     private Links links;
     private List<DataBean> data;
+    private List<T> rows;
 
     public SuccessResult (String self,T attributes){
         links = new Links();
@@ -26,6 +27,7 @@ public class SuccessResult<T extends AbstractBaseDomain> extends AbstractBaseRes
         links.setSelf(self);
         links.setNext(self + "?page" + next);
         links.setLast(self + "?page" + last);
+        this.rows = attributes;
         attributes.forEach(attribute->createDataBean(self,attribute));
     }
 
